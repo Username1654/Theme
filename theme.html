@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .dark{
+            background-color: black;
+            color: white;
+        }
+        .light{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body class="light" id="bod">
+    <h1>Switch the Theme!</h1>
+    <button id="theme"></button>
+    <script>
+       let body = document.getElementById('bod')
+       let button = document.getElementById('theme')
+       console.log(body.className)
+       button.innerHTML = 'Light'
+       button.addEventListener('click', function(){
+         if(body.className ==='light'){
+            body.classList.toggle('light')
+            body.classList.toggle('dark')
+         }else{
+           body.classList.toggle('light')
+            body.classList.toggle('dark') 
+         }
+       })
+      
+    </script>
+</body>
+</html>
